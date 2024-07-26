@@ -120,9 +120,9 @@ class NotEnoughFunds(TransactionRevertedError):
 
 ### Accessing errors
 
-Revert errors are automatically raised in form of exceptions unless a transaction configured to return immediately with `confirmations=0`.
+Revert errors are automatically raised in form of exceptions unless a transaction is configured to return immediately with `confirmations=0`.
 
-In case of `confirmations=0`, a revert error can be accessed using the `error` property of the transaction object. This performs an implicit `.wait()`.
+In case of `confirmations=0`, you can access the error using the `error` property of the transaction object which is returned by an implicit `.wait()`.
 If the transaction did not revert, `error` is `None`.
 
 ```python

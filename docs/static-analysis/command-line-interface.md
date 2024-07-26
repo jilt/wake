@@ -88,4 +88,4 @@ class MyPrinter(Printer):
 
 1. Both `pathlib` and `typing` modules may be imported at the top level of the file as they are imported by the Wake runtime anyway.
 2. `graphviz` module is not lazy-loaded, it should be imported inside a function or a method that uses it.
-3. `wake.ir` members accessed at the top level of the class. This will case the module to be loaded. Instead, a property or a helper function should be used:
+3. `wake.ir` members accessed at the top level of the class. This will load the module, please use a property or a helper function instead.

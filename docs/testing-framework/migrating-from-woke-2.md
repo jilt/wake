@@ -6,15 +6,15 @@ This document describes the changes and how to migrate from Woke 2.x to Woke 3.x
 
 ## Return value of transaction calls
 
-In Woke 2.x, the return value of a transaction call was a return value of a function called in the transaction.
-Using the `return_tx=True` flag, it was possible to return the transaction object itself. With `return_tx=True`, a transaction object was returned immediately after the transaction was sent.
+In Woke 2.x a transaction call returned the very same value returned by the called function.
+Using the `return_tx=True` flag, it was possible to return the transaction object itself immediately after the transaction was sent.
 As a consequence, when using `return_tx=True`:
 
 - the transaction revert exception was not automatically raised,
 - `chain.tx_callback` was not called for the transaction,
 - accessing some transaction fields performed implicit `.wait()`.
 
-With Woke 3.x, the return value of a transaction call is always a transaction object.
+This is the default behaviour in Woke 3.x, the return value of a transaction call is always a transaction object.
 Furthermore, the transaction object is returned only after the transaction is mined (unless overridden with `confirmations=0`).
 The return value of the `.deploy()` method is still the contract object. To get the transaction object from the `.deploy()` method, use the `return_tx=True` flag.
 The `return_tx` flag is no longer supported for other transaction calls.

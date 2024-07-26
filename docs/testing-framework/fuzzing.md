@@ -283,3 +283,11 @@ Standard output and standard error of all processes are redirected to the `.wake
     ```
 
     It is highly recommended to use [OrderedSet](https://pypi.org/project/ordered-set/) in fuzz tests instead of the built-in `set`.
+
+    ```python
+    from ordered_set import OrderedSet
+    
+    items = {1, 2, 3}
+    orderedItems = OrderedSet(list(items))
+    item = random.choice(orderedItems)
+    ```

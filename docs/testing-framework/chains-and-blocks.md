@@ -114,6 +114,13 @@ def test_chain():
     assert chain.chain_id == 1020
 ```
 
+You can narrow the default transaction type for each chain:
+
+```
+chain.default_tx_type = 0
+```
+Check the [Transaction Objects](transaction-objects.md) page for more information.
+
 ## Accessing chain blocks
 
 The `chain.blocks` property can be used to access up-to-date chain blocks data.

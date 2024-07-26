@@ -73,7 +73,7 @@ exclude_paths = ["node_modules", "venv", ".venv", "lib", "script", "test"]
 
 ## Via IR
 
-The compiler can can generate bytecode by converting the sources to Yul first (`Solidity -> Yul -> EVM bytecode`) instead of the traditional `Solidity -> EVM bytecode` approach.
+The compiler can generate bytecode by converting the sources to Yul first (`Solidity -> Yul -> EVM bytecode`) instead of the traditional `Solidity -> EVM bytecode` approach.
 See the [Solidity documentation]() for more information.
 
 By default, the `via_IR` config option is left unset, which leaves the decision to the compiler.

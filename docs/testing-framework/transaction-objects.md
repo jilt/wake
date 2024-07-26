@@ -25,7 +25,10 @@ def test_callback():
 ```
 
 !!! warning
-    `tx_callback` is not invoked for transactions with `confirmations=0`!
+    `tx_callback` is not invoked for transactions with `confirmations=0`! Check [Events and Errors](events-and-errors.md#errors) for more info.
+
+Every transaction object has a `call_trace` property that visualizes the call stack of the transaction.
+It can be used to debug failing transactions but it needs [some special config](debugging.md#call-traces) when used in forking mode.
 
 ## Transaction properties
 

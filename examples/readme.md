@@ -1,3 +1,4 @@
+
 ## Past audits examples
 
 1) [Detectors](https://github.com/Ackee-Blockchain/wake/tree/main/wake_detectors)
@@ -15,3 +16,4 @@
 13) [Composable COW](https://github.com/Ackee-Blockchain/tests-composable-cow)
 14) [Rhinestone module kit](https://github.com/Ackee-Blockchain/tests-rhinestone-modulekit-examples)
 15) [Rhinestone registry](https://github.com/Ackee-Blockchain/tests-rhinestone-registry)
+    
